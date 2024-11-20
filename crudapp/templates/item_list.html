@@ -1,0 +1,12 @@
+<h1>item list</h1>
+<a href="{% url 'create_item' %}">Add New Item</a>
+
+<ul>
+    {% for item in items %}
+        <l1>
+        {{ item.name }}
+            <a href="{% url 'update_item' item.pk %}">Edit</a>
+            <a href="{% url 'delete_item' item.pk %}">Delete</a>
+        </l1>
+    {% endfor %}
+</ul>
